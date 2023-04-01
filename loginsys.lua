@@ -10,7 +10,7 @@ local Window = Rayfield:CreateWindow({
        FileName = "SKHub"
     },
     Discord = {
-       Enabled = true,,
+       Enabled = true,
        Invite = "wNBS66awAC", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD.
        RememberJoins = true -- Set this to false to make them join the discord every time they load it up
     },
