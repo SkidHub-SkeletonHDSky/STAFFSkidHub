@@ -56,9 +56,6 @@ local Toggle = Tab:CreateToggle({
                 wait(2)
                 print("2")
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.01219177246094, 2.9999992847442627, -40.98185348510742)
-                wait(1)
-                print("3")
-                wait(1)
             end
         else
             _G.loop = false
@@ -88,9 +85,6 @@ local Toggle = Tab:CreateToggle({
                 wait(2)
                 print("2")
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.948150634765625, 3.149998426437378, 39.583290100097656)
-                wait(1)
-                print("3")
-                wait(1)
             end
         else
             _G.loop = false
