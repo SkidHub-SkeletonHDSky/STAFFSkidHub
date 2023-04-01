@@ -29,20 +29,21 @@ local Tab = Window:CreateTab("Main", 4483362458)
 local Section = Tab:CreateSection("Location Teleport")
 local Dropdown = Tab:CreateDropdown({
     Name = "Dropdown Example",
-    Options = {"SPM","PP", "AP", "APUpgrade", "Area"},
+    Options = {"SPM","PP", "AP", "APUpgrade", "Area"}
     CurrentOption = "Option 1",
     Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function(Option)
     if Option == "SPM" then
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(33.783905029296875, 2.8523647785186768, 39.54866409301758)
-    if Option == "PP" then
+    elseif Option == "PP" then
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(23.368131637573242, 2.8523647785186768, -33.02229309082031)
-    if Option == "AP" then
+    elseif Option == "AP" then
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-31.63499641418457, 2.8523647785186768, -35.20541000366211)
-    if Option == "APUpgrade" then
+    elseif Option == "APUpgrade" then
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-84.53499603271484, 15.99999713897705, -8.61293888092041)
-    if Option == "Area" then
+    elseif Option == "Area" then
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(61.92364501953125, 2.9999992847442627, -9977.748046875)
+    end
     end,
 })
 
