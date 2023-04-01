@@ -26,34 +26,14 @@ local Window = Rayfield:CreateWindow({
     }
  })
 local Tab = Window:CreateTab("Main", 4483362458)
-local Section = Tab:CreateSection("Location Teleport")
-local Dropdown = Tab:CreateDropdown({
-    Name = "Dropdown Example",
-    Options = {"SPM","PP", "AP", "APUpgrade", "Area"}
-    CurrentOption = "Option 1",
-    Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Option)
-    if Option == "SPM" then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(33.783905029296875, 2.8523647785186768, 39.54866409301758)
-    elseif Option == "PP" then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(23.368131637573242, 2.8523647785186768, -33.02229309082031)
-    elseif Option == "AP" then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-31.63499641418457, 2.8523647785186768, -35.20541000366211)
-    elseif Option == "APUpgrade" then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-84.53499603271484, 15.99999713897705, -8.61293888092041)
-    elseif Option == "Area" then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(61.92364501953125, 2.9999992847442627, -9977.748046875)
-    end
-    end,
-})
 
 local Section = Tab:CreateSection("Speed")
 local Slider = Tab:CreateSlider({
     Name = "Walkspeed",
-    Range = {0, 50},
-    Increment = 10,
+    Range = {0, 22},
+    Increment = 1,
     Suffix = "Walkspeed",
-    CurrentValue = 10,
+    CurrentValue = 22,
     Flag = "Slider1",
     Callback = function(Value)
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
@@ -62,21 +42,77 @@ local Slider = Tab:CreateSlider({
 
 local Tab = Window:CreateTab("Automatic", 4483362458)
 local Section = Tab:CreateSection("AutoFarm")
-local Button = Tab:CreateButton({
-    Name = "Start",
-    Callback = function()
-    while true do
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.773045003414154, 2.9999992847442627, 39.372901916503906)
-        wait(1)
-        print("1")
-        wait(5)
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.01219177246094, 2.9999992847442627, -40.98185348510742)
-        wait(1)
-        print("2")
-        wait(5)
-    end
+local Toggle = Tab:CreateToggle({
+    Name = "Farm",
+    CurrentValue = false,
+    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        if (Value) then
+            _G.loop = true
+            while _G.loop == true do wait()
+                print("1")
+                wait(1)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.773045003414154, 2.9999992847442627, 39.372901916503906)
+                wait(2)
+                print("2")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.01219177246094, 2.9999992847442627, -40.98185348510742)
+                wait(1)
+                print("3")
+                wait(1)
+            end
+        else
+            _G.loop = false
+            while _G.loop == true do wait()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.773045003414154, 2.9999992847442627, 39.372901916503906)
+                wait(1)
+                print("1")
+                wait(2)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.01219177246094, 2.9999992847442627, -40.98185348510742)
+            end
+        end
     end,
  })
+
+ local Tab = Window:CreateTab("Teleport", 4483362458)
+ local Section = Tab:CreateSection("Teleport Points")
+ local Button = Tab:CreateButton({
+    Name = "SPM",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(33.783905029296875, 2.8523647785186768, 39.54866409301758)
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "PP",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(23.368131637573242, 2.8523647785186768, -33.02229309082031)
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "AP",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-31.63499641418457, 2.8523647785186768, -35.20541000366211)
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "APUpgrade",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-84.53499603271484, 15.99999713897705, -8.61293888092041)
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "Area",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(61.92364501953125, 2.9999992847442627, -9977.748046875)
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "TP",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-106, 16.14999008178711, 26)
+    end,
+ })
+ 
+
  local Tab = Window:CreateTab("Background", 4483362458)
  local Section = Tab:CreateSection("Modes")
  local Button = Tab:CreateButton({
