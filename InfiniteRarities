@@ -1,4 +1,5 @@
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+wait(5)
 getgenv().SecureMode = true
 local Window = Rayfield:CreateWindow({
     Name = "SKHub",
@@ -43,7 +44,7 @@ local Slider = Tab:CreateSlider({
 local Tab = Window:CreateTab("Automatic", 4483362458)
 local Section = Tab:CreateSection("AutoFarm")
 local Toggle = Tab:CreateToggle({
-    Name = "Farm",
+    Name = "Farm (Roll) + Rebirth",
     CurrentValue = false,
     Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function(Value)
@@ -53,10 +54,12 @@ local Toggle = Tab:CreateToggle({
                 print("1")
                 wait(1)
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.773045003414154, 2.9999992847442627, 39.372901916503906)
-                wait(3)
+                wait(2)
                 print("2")
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.01219177246094, 2.9999992847442627, -40.98185348510742)
+                wait(1)
                 print("3")
+                wait(1)
             end
         else
             _G.loop = false
@@ -66,6 +69,38 @@ local Toggle = Tab:CreateToggle({
                 print("1")
                 wait(2)
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.01219177246094, 2.9999992847442627, -40.98185348510742)
+            end
+        end
+    end,
+ })
+
+
+ local Toggle = Tab:CreateToggle({
+    Name = "Farm (Roll) + SP",
+    CurrentValue = false,
+    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        if (Value) then
+            _G.loop = true
+            while _G.loop == true do wait()
+                print("1")
+                wait(1)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.773045003414154, 2.9999992847442627, 39.372901916503906)
+                wait(2)
+                print("2")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.948150634765625, 3.149998426437378, 39.583290100097656)
+                wait(1)
+                print("3")
+                wait(1)
+            end
+        else
+            _G.loop = false
+            while _G.loop == true do wait()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.773045003414154, 2.9999992847442627, 39.372901916503906)
+                wait(1)
+                print("1")
+                wait(2)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.948150634765625, 3.149998426437378, 39.583290100097656)
             end
         end
     end,
