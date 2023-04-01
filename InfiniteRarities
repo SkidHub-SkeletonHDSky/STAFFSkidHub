@@ -1,5 +1,4 @@
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
-wait(5)
 getgenv().SecureMode = true
 local Window = Rayfield:CreateWindow({
     Name = "SKHub",
