@@ -1,4 +1,3 @@
-
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 
 local Window = Rayfield:CreateWindow({
@@ -33,5 +32,6 @@ local Button = Tab:CreateButton({
     Name = "Button Example",
     Callback = function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/SkidHub-SkeletonHDSky/STAFFSkidHub/main/SkidhubLUA.lua'))()
+        Rayfield:Destroy()
     end,
 })
