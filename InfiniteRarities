@@ -53,6 +53,7 @@ local Toggle = Tab:CreateToggle({
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.773045003414154, 2.9999992847442627, 39.372901916503906)
                 wait(3)
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.01219177246094, 2.9999992847442627, -40.98185348510742)
+                wait(1)
             end
         else
             _G.loop = false
@@ -60,6 +61,7 @@ local Toggle = Tab:CreateToggle({
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.773045003414154, 2.9999992847442627, 39.372901916503906)
                 wait(3)
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.01219177246094, 2.9999992847442627, -40.98185348510742)
+                wait(1)
             end
         end
     end,
@@ -77,6 +79,7 @@ local Toggle = Tab:CreateToggle({
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.773045003414154, 2.9999992847442627, 39.372901916503906)
                 wait(3)
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.948150634765625, 3.149998426437378, 39.583290100097656)
+                wait(1)
             end
         else
             _G.loop = false
@@ -84,6 +87,7 @@ local Toggle = Tab:CreateToggle({
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.773045003414154, 2.9999992847442627, 39.372901916503906)
                 wait(3)
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.948150634765625, 3.149998426437378, 39.583290100097656)
+                wait(1)
             end
         end
     end,
