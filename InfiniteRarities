@@ -196,7 +196,7 @@ local Toggle = Tab:CreateToggle({
                 wait(1)
                 print("SKHub | Teleport!")
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-92.16670227050781, 16.249990463256836, -1.8569060564041138)--AP Luck
-                wait(2)         
+                wait(0.5)         
             end
         else
             _G.loop = false
