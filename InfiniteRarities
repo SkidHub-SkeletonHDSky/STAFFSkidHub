@@ -1,12 +1,340 @@
---[[
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.2.5) ~  Much Love, Ferib 
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()getgenv().SecureMode = true
+local Window = Rayfield:CreateWindow({
+    Name = "SKHub",
+    LoadingTitle = "Welcome to SkHub",
+    LoadingSubtitle = "by SkeletonHDSky",
+    ConfigurationSaving = {
+       Enabled = true,
+       FolderName = nil, -- Create a custom folder for your hub/game
+       FileName = "SkHub"
+    },
+    Discord = {
+       Enabled = false,
+       Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD.
+       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+    },
+    KeySystem = false, -- Set this to true to use our key system
+    KeySettings = {
+       Title = "Sirius Hub",
+       Subtitle = "",
+       Note = "",
+       FileName = "SKHubKey",
+       SaveKey = true,
+       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+       Key = "NoOneCanTakeTheKeyLOOOOOOOOOLL#######"
+    }
+ })
+local Tab = Window:CreateTab("Main", 4483362458)
 
-]]--
+local Section = Tab:CreateSection("Speed")
+local Slider = Tab:CreateSlider({
+    Name = "Walkspeed",
+    Range = {0, 22},
+    Increment = 1,
+    Suffix = "Walkspeed",
+    CurrentValue = 22,
+    Flag = "Slider1",
+    Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
+    end,
+ })
 
-local v0=string.char;local v1=string.byte;local v2=string.sub;local v3=bit32 or bit ;local v4=v3.bxor;local v5=table.concat;local v6=table.insert;local function v7(v8,v9)local v19={};for v29=1, #v8 do v6(v19,v0(v4(v1(v2(v8,v29,v29 + 1 )),v1(v2(v9,1 + ((v29-1)% #v9) ,1 + ((v29-1)% #v9) + 1 )))%256 ));end return v5(v19);end local v10=loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Rayfield/main/source"))();getgenv().SecureMode=true;local v12=v10:CreateWindow({[v7("\90\193\187\206","\20\160\214\171\87\109\116")]=v7("\74\215\219\190\123","\25\156\147\203"),[v7("\34\7\251\228\88\14\254\176\7\28\246\229","\110\104\154\128\49\96\153\228")]=v7("\126\23\46\50\49\68\23\98\37\49\9\33\41\25\43\75","\41\114\66\81\94"),[v7("\199\166\194\175\202\70\227\216\188\193\191\202\92\232\238","\139\201\163\203\163\40\132")]=v7("\241\87\134\53\44\243\33\246\90\201\8\15\210\30\248\87","\147\46\166\102\71\150\77"),[v7("\27\1\132\248\226\228\45\28\139\234\226\236\54\61\139\232\226\237\63","\88\110\234\158\139\131")]={[v7("\249\80\182\130\174\172\89","\188\62\215\224\194\201\61\99")]=true,[v7("\151\189\6\229\16\163\156\11\236\16","\209\210\106\129\117")]=nil,[v7("\100\221\177\116\122\192\185\69","\34\180\221\17\52\161\212\32")]=v7("\2\196\210\3\248","\81\175\154\118\154\64\207\133")},[v7("\213\62\88\195\165\106\166","\145\87\43\160\202\24\194")]={[v7("\100\42\136\58\77\33\141","\33\68\233\88")]=false,[v7("\136\252\178\238\165\219","\193\146\196\135\209\190\227\120")]=v7("\11\26\76\112\234\12\1\64\114\245\11\30","\101\117\37\30\156"),[v7("\206\53\192\212\59\178\226\238\26\194\216\56\163","\156\80\173\177\86\208\135")]=true},[v7("\125\10\69\77\14\18\193\83\2","\54\111\60\30\119\97\181")]=false,[v7("\25\14\81\97\60\19\84\26\60\12\91","\82\107\40\50\89\103\32\115")]={[v7("\75\212\251\178\114","\31\189\143\222\23\21\167")]=v7("\79\46\37\198\92\59\60\15\34\205","\28\71\87\175\41\72"),[v7("\242\51\91\189\20\151\112\125","\161\70\57\201\125\227\28\24")]="",[v7("\244\53\163\185","\186\90\215\220\52\122")]="",[v7("\255\254\252\173\14\183\172\77","\185\151\144\200\64\214\193\40")]=v7("\190\0\217\0\143\0\244\12","\237\75\145\117"),[v7("\201\199\0\182\35\160\74","\154\166\118\211\104\197\51")]=true,[v7("\106\158\114\245\17\0\84\170\97\248\55\54\68\152\118","\45\236\19\151\90\101")]=false,[v7("\248\62\209","\179\91\168\213\150\176")]=v7("\172\73\203\181\9\15\131\72\208\186\7\41\182\78\225\144\9\53\174\105\203\148\35\3\173\105\203\148\32\0\193\5\167\248\79\111\193","\226\38\132\219\108\76")}});local v13=v12:CreateTab(v7("\143\255\167\123","\194\158\206\21\91\112\55"),4483363788 -(1293 + 37) );local v14=v13:CreateSection(v7("\4\102\21\224\32","\87\22\112\133\68\88\179"));local v16=v13:CreateSlider({[v7("\36\10\169\177","\106\107\196\212\95\213\58")]=v7("\107\30\71\248\71\181\206\179\88","\60\127\43\147\52\197\171\214"),[v7("\14\59\115\126\161","\92\90\29\25\196\81\17\109")]={0,4 + 18 },[v7("\244\40\67\56\123\33\196\211\50","\189\70\32\74\30\76\161")]=976 -(42 + 933) ,[v7("\35\150\164\195\49\228","\112\227\194\165\88\156\23\170")]=v7("\207\44\51\92\196\207\253\40\59","\152\77\95\55\183\191"),[v7("\60\53\101\72\137\243\11\22\118\86\153\248","\127\64\23\58\236\157")]=703 -(417 + 264) ,[v7("\1\57\56\20","\71\85\89\115\163\38")]=v7("\101\133\163\131\22\32\47","\54\233\202\231\115\82\30\108"),[v7("\239\70\16\8\33\64\207\76","\172\39\124\100\67\33")]=function(v15)game.Players.LocalPlayer.Character.Humanoid.WalkSpeed=v15;end});local v13=v12:CreateTab(v7("\114\17\212\141\205\165\71\13\195","\51\100\160\226\160\196"),4483362458);local v14=v13:CreateSection(v7("\101\130\90\196\202\68\191","\54\210\122\130\171"));local v17=v13:CreateToggle({[v7("\142\140\127\58","\192\237\18\95")]=v7("\165\48\201\15\227\233\177\62\215\14\234\225\200\113\232\50","\227\81\187\98\195\193"),[v7("\171\165\42\226\20\31\80\190\177\52\229\20","\232\208\88\144\113\113\36")]=false,[v7("\203\123\184\233","\141\23\217\142\98")]=v7("\17\140\7\37\208\247","\69\227\96\66\188\146\158"),[v7("\124\223\27\124\243\170\213\84","\63\190\119\16\145\203\182")]=function(v15)if v15 then local v30=0;while true do if (v30==(0 + 0)) then _G.loop=true;while _G.loop==true  do local v44=0;local v45;local v46;while true do if (v44==(0 -0)) then v45=1311 -(689 + 622) ;v46=nil;v44=1;end if (v44==1) then while true do if (v45==(0 -0)) then v46=0;while true do if (v46==(2 + 0)) then local v81=726 -(213 + 513) ;while true do if (0==v81) then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(9.551532745361328 + 30 ,1510.9999992847443 -(1176 + 332) ,5.312777996063232 -2 );wait(1);v81=3 -2 ;end if (v81==2) then v46=2 + 1 ;break;end if (v81==1) then print(v7("\209\213\109\43\75\162\226\5\10\76\238\251\85\49\91\246\191","\130\158\37\94\41"));game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -0.773045003414154,9.999999284744263 -7 ,39.372901916503906);v81=2;end end end if (v46==1) then local v82=0 -0 ;while true do if (v82==(1 + 1)) then v46=2;break;end if (v82==1) then wait(1);print(v7("\191\147\207\238\221\83\225\165\184\189\235\254\207\28\239\241\205","\236\216\135\155\191\115\157\133"));v82=1865 -(657 + 1206) ;end if (v82==(0 -0)) then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(680.3843193054199 -(340 + 301) ,649.9999992847443 -(107 + 540) ,100.20112991333008 -61 );print(v7("\76\194\164\158\125\169\144\203\75\236\128\142\111\230\158\159\62","\31\137\236\235"));v82=1 + 0 ;end end end if (v46==4) then print(v7("\147\100\30\172\162\15\42\249\148\74\58\188\176\64\36\173\225","\192\47\86\217"));game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(15.184444427490234 + 24 ,2.9999992847442627 + 0 ,27.963645935058594);wait(934 -(18 + 914) );break;end if (v46==(239 -(12 + 224))) then wait(2 + 0 );game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(39.38431930541992,1238.9999992847443 -(261 + 975) ,39.20112991333008);print(v7("\14\12\157\214\183\125\59\245\247\176\49\34\165\204\167\41\102","\93\71\213\163\213"));wait(3 -2 );v46=4;end if (v46==(1389 -(693 + 696))) then local v85=1734 -(1479 + 255) ;while true do if (v85==(0 + 0)) then wait();print(v7("\217\16\94\158\175\180\204\170\15\115\135\168\228\223\248\47\55","\138\91\22\235\205\148\176"));v85=1;end if (2==v85) then v46=1 + 0 ;break;end if (v85==1) then local v113=0 + 0 ;while true do if (v113==(0 -0)) then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(0.773045003414154 -0),1.9999992847442627 + 1 ,102.3729019165039 -63 );wait(2);v113=1;end if (v113==(1 -0)) then v85=1411 -(163 + 1246) ;break;end end end end end end break;end end break;end end end break;end end else local v31=0;while true do if (v31==(0 -0)) then _G.loop=false;while _G.loop==true  do local v47=0;while true do if (v47==(929 -(641 + 286))) then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(17.551532745361328 + 22 ,112.99999928474426 -(65 + 45) ,3.3127779960632324);wait(3 -2 );print(v7("\217\140\114\18\65\100\230\135\222\162\86\2\83\43\232\211\170\148\78\8\83\52\255\195\171","\138\199\58\103\35\68\154\167"));game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(1438.7730450034142 -(1091 + 347)),2.9999992847442627,18.372901916503906 + 21 );v47=3 + 0 ;end if (v47==(14 -10)) then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(39.184444427490234,2.9999992847442627 + 0 ,92.9636459350586 -65 );wait(1);break;end if (v47==(1 + 0)) then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(39.38431930541992,489.99999928474426 -(358 + 129) ,35.20112991333008 + 4 );print(v7("\61\115\127\220\12\24\75\137\58\93\91\204\30\87\69\221\78\107\67\198\30\72\82\205\79","\110\56\55\169"));wait(1 + 0 );print(v7("\38\89\217\79\247\84\74\85\70\244\86\240\4\89\7\102\177\105\225\27\70\5\119\245\27","\117\18\145\58\149\116\54"));v47=9 -7 ;end if (v47==(171 -(33 + 138))) then local v55=0 + 0 ;while true do if ((1 + 0)==v55) then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(1907.7730450034142 -(1210 + 697)),2.9999992847442627,87.3729019165039 -48 );wait(7 -5 );v55=2 + 0 ;end if (v55==0) then wait();print(v7("\197\103\38\210\40\64\65\155\194\73\2\194\58\15\79\207\182\127\26\200\58\16\88\223\183","\150\44\110\167\74\96\61\187"));v55=1 + 0 ;end if (v55==(55 -(37 + 16))) then v47=3 -2 ;break;end end end if (v47==(11 -8)) then wait(999 -(417 + 580) );game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(39.38431930541992,2.9999992847442627,106.20112991333008 -67 );print(v7("\35\222\135\229\18\181\179\176\36\240\163\245\0\250\189\228\80\198\187\255\0\229\170\244\81","\112\149\207\144"));wait(2 -1 );v47=405 -(65 + 336) ;end end end break;end end end end});local v14=v13:CreateSection(v7("\127\121\3\10\121\98\66","\47\41\35\76\24\16"));local v17=v13:CreateToggle({[v7("\93\190\64\216","\19\223\45\189\121\151\228")]=v7("\51\211\2\176\67\143\138\26\222\28\244\67\140\248\37\226","\117\178\112\221\99\167\216"),[v7("\136\33\28\154\65\165\32\56\137\72\190\49","\203\84\110\232\36")]=false,[v7("\246\160\2\139","\176\204\99\236\52\217\117\75")]=v7("\75\38\18\86\253\122\124","\31\73\117\49\145"),[v7("\57\4\83\91\24\4\92\92","\122\101\63\55")]=function(v15)if v15 then local v32=0;local v33;while true do if (v32==0) then v33=0;while true do if (v33==(0 -0)) then _G.loop=true;while _G.loop==true  do local v57=0 + 0 ;local v58;while true do if ((1178 -(571 + 607))==v57) then v58=0;while true do if (v58==(10 -6)) then local v86=749 -(407 + 342) ;while true do if (v86==1) then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(671.0298767089844 -(629 + 3) ,2.9999992847442627, -(1924.8017082214355 -(898 + 987)));v58=14 -9 ;break;end if (v86==0) then wait(2 + 0 );print(v7("\10\123\192\207\171\143\37\16\220\223\165\202\41\95\250\206\232","\89\48\136\186\201\175"));v86=1;end end end if (v58==1) then local v87=1810 -(156 + 1654) ;while true do if (v87==(412 -(78 + 334))) then wait(1956 -(587 + 1367) );print(v7("\24\38\255\151\208\245\55\77\227\135\222\176\59\2\197\150\147","\75\109\183\226\178\213"));v87=1;end if (v87==(2 -1)) then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(85.02987670898438 -46 ,2.9999992847442627, -(8.801708221435547 + 31));v58=1384 -(710 + 672) ;break;end end end if ((0 -0)==v58) then wait();game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(0.773045003414154 -0),1302.9999992847443 -(976 + 324) ,39.372901916503906);print(v7("\30\239\43\95\38\75\49\132\55\79\40\14\61\203\17\94\101","\77\164\99\42\68\107"));v58=836 -(547 + 288) ;end if (v58==2) then wait(1 -0 );print(v7("\253\45\37\250\41\116\176\246\250\3\1\234\59\59\190\162\143","\174\102\109\143\75\84\204\214"));game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(73.41020011901855 -54 ,2.9999992847442627, -(71.45424270629883 -31));v58=1114 -(324 + 787) ;end if (v58==(5 + 2)) then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(61.029876708984375 -22 ,2.9999992847442627 + 0 , -(36.80170822143555 + 3));wait(1);game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(1.115152359008789 + 10 ,2.9999992847442627, -(2020.3112564086914 -(1391 + 589)));break;end if (v58==(91 -(41 + 44))) then wait(1);game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -0.773045003414154,2.9999992847442627,39.372901916503906);wait(2 -0 );v58=4 + 3 ;end if (v58==3) then local v92=572 -(104 + 468) ;while true do if (v92==1) then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(469.77304500341415 -(52 + 417)),1867.9999992847443 -(41 + 1824) ,39.372901916503906);v58=3 + 1 ;break;end if ((0 + 0)==v92) then wait(804 -(390 + 413) );print(v7("\51\83\147\171\21\233\77\226\52\125\183\187\7\166\67\182\65","\96\24\219\222\119\201\49\194"));v92=1 -0 ;end end end if (v58==(5 + 0)) then local v93=0;while true do if (v93==1) then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(4.838144302368164 + 22 ,2.9999992847442627, -(803.4664497375488 -(734 + 29)));v58=1995 -(1415 + 574) ;break;end if ((0 -0)==v93) then wait(2 -1 );print(v7("\152\104\217\91\225\235\95\177\122\230\167\70\225\65\241\191\2","\203\35\145\46\131"));v93=1 + 0 ;end end end end break;end end end break;end end break;end end else local v34=0 + 0 ;while true do if (v34==(0 -0)) then _G.loop=false;while _G.loop==true  do wait();game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(735.7730450034142 -(71 + 664)),1512.9999992847443 -(499 + 1011) ,39.372901916503906);print(v7("\179\203\140\230\246\141\212\184\180\229\168\246\228\194\218\236\192\211\176\252\228\221\205\252\193","\224\128\196\147\148\173\168\152"));wait(1476 -(146 + 1328) );print(v7("\118\30\116\98\3\71\63\5\1\89\123\4\23\44\87\33\28\68\21\8\51\85\48\88\54","\37\85\60\23\97\103\67"));game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(38.029876708984375 + 1 ,2.9999992847442627, -(112.80170822143555 -73));wait(1);print(v7("\200\53\62\81\249\94\10\4\207\27\26\65\235\17\4\80\187\45\2\75\235\14\19\64\186","\155\126\118\36"));game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(14.410200119018555 + 5 ,948.9999992847443 -(874 + 72) , -(184.45424270629883 -144));wait(1);print(v7("\150\110\245\228\76\123\69\244\145\64\209\244\94\52\75\160\229\118\201\254\94\43\92\176\228","\197\37\189\145\46\91\57\212"));game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(1904.7730450034142 -(635 + 1269)),973.9999992847443 -(21 + 950) ,49.372901916503906 -10 );wait(4 -2 );print(v7("\14\151\131\104\131\121\33\252\159\120\141\60\45\179\185\105\193\10\41\179\187\109\132\61\124","\93\220\203\29\225\89"));game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(170.02987670898438 -(29 + 102) ,2.9999992847442627, -(1348.8017082214355 -(249 + 1060)));wait(827 -(342 + 484) );print(v7("\105\123\218\248\122\26\76\178\217\125\86\85\226\226\106\78\16\193\249\119\74\64\247\233\57","\58\48\146\141\24"));game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(26.838144302368164,2.9999992847442627 + 0 , -(1802.4664497375488 -(272 + 1490)));wait(4 -3 );end break;end end end end});local v14=v13:CreateSection(v7("\156\99\105\231\217\89\56","\221\51\73\161\184\43\85"));local v17=v13:CreateToggle({[v7("\81\26\214\250","\31\123\187\159\216\229\165\149")]=v7("\22\167\189\79\131\7\110\118\60\170\230\2\136\15\105\105\55\180\174\70\198\92","\80\198\207\34\163\47\60\25"),[v7("\95\177\26\76\201\88\241\74\165\4\75\201","\28\196\104\62\172\54\133")]=false,[v7("\97\232\229\58","\39\132\132\93\237")]=v7("\191\174\212\246\3\249\0","\235\193\179\145\111\156\57\113"),[v7("\130\240\129\228\163\240\142\227","\193\145\237\136")]=function(v15)if v15 then local v35=0 -0 ;local v36;while true do if (v35==(1817 -(607 + 1210))) then v36=0;while true do if (v36==0) then _G.loop=true;while _G.loop==true  do local v59=0;while true do if (v59==1) then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(36.716796875 + 4),1.9999992847442627 + 1 , -(29.480350494384766 + 11));wait(3 -2 );print(v7("\38\226\83\35\206\129\9\137\79\51\192\196\5\198\105\34\141","\117\169\27\86\172\161"));game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -92.7966537475586,6.249992370605469 + 10 ,6.196938514709473);wait(1 -0 );v59=2;end if (v59==(2 + 1)) then local v67=356 -(328 + 28) ;while true do if (v67==2) then print(v7("\197\15\137\196\178\85\77\182\16\164\221\181\5\94\228\48\224","\150\68\193\177\208\117\49"));v59=5 -1 ;break;end if (v67==(1929 -(801 + 1128))) then wait(1751 -(958 + 792) );print(v7("\0\153\88\220\238\112\204\141\7\183\124\204\252\63\194\217\114","\83\210\16\169\140\80\176\173"));v67=1;end if (v67==(870 -(550 + 319))) then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(1442.2583236694336 -(463 + 887)),27.24999237060547 -11 , -18.09095573425293);wait(3 -2 );v67=2;end end end if (v59==(2 + 4)) then wait(424 -(43 + 379) );print(v7("\20\45\51\251\37\70\7\174\19\3\23\235\55\9\9\250\102","\71\102\123\142"));game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(572.716796875 -(506 + 26)),2.9999992847442627, -(1918.4803504943848 -(1554 + 324)));wait(465 -(453 + 11) );print(v7("\202\255\50\172\251\148\6\249\205\209\22\188\233\219\8\173\184","\153\180\122\217"));v59=1409 -(355 + 1047) ;end if (v59==2) then local v69=1405 -(1029 + 376) ;while true do if (1==v69) then local v95=0;while true do if (v95==1) then v69=1056 -(183 + 871) ;break;end if (v95==(0 -0)) then wait(2 + 0 );print(v7("\25\48\35\10\195\106\7\75\43\196\38\30\27\16\211\62\90","\74\123\107\127\161"));v95=473 -(342 + 130) ;end end end if (v69==(1539 -(18 + 1521))) then print(v7("\205\48\112\97\252\91\68\52\202\30\84\113\238\20\74\96\191","\158\123\56\20"));game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -0.773045003414154,2.9999992847442627 + 0 ,39.372901916503906);v69=1 -0 ;end if (v69==(1688 -(571 + 1115))) then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(64.716796875 -24),2.9999992847442627 + 0 , -(242.48035049438477 -(8 + 194)));v59=3;break;end end end if (v59==(582 -(308 + 269))) then print(v7("\200\226\30\97\168\187\213\118\64\175\247\204\38\123\184\239\136","\155\169\86\20\202"));game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(481.4814758300781 -(67 + 322)),16.249990463256836, -(28.080116271972656 -18));wait(1 + 0 );print(v7("\42\233\6\162\17\89\222\110\131\22\21\199\62\184\1\13\131","\121\162\78\215\115"));game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -0.773045003414154,2.9999992847442627,39.372901916503906);v59=3 + 3 ;end if (v59==(1803 -(1206 + 590))) then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(119.16670227050781 -27),16.249990463256836, -(690.8569060564041 -(383 + 306)));wait(2);break;end if (v59==0) then wait();game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(893.7730450034142 -(227 + 666)),2.9999992847442627 + 0 ,19.372901916503906 + 20 );print(v7("\115\3\22\249\66\104\34\172\116\45\50\233\80\39\44\248\1","\32\72\94\140"));wait(801 -(478 + 321) );print(v7("\198\57\141\235\198\227\233\82\145\251\200\166\229\29\183\234\133","\149\114\197\158\164\195"));v59=1 + 0 ;end if (v59==4) then local v73=0;while true do if (v73==(0 -0)) then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -0.773045003414154,2.9999992847442627,1004.3729019165039 -(748 + 217) );wait(1676 -(1415 + 259) );v73=80 -(19 + 60) ;end if (v73==(2 + 0)) then wait(1 -0 );v59=5;break;end if (v73==(1 + 0)) then print(v7("\200\48\56\224\52\14\200\187\47\21\249\51\94\219\233\15\81","\155\123\112\149\86\46\180"));game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(1254.716796875 -(89 + 1125)),2.9999992847442627, -40.480350494384766);v73=2;end end end end end break;end end break;end end else local v37=1251 -(113 + 1138) ;local v38;while true do if (v37==0) then v38=1594 -(483 + 1111) ;while true do if (v38==(1456 -(87 + 1369))) then _G.loop=false;while _G.loop==true  do local v60=0;while true do if ((1117 -(871 + 244))==v60) then local v74=0;while true do if ((0 -0)==v74) then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(39.716796875 + 1),4.999999284744263 -2 , -(36.480350494384766 + 4));wait(1);v74=1 + 0 ;end if (v74==(5 -2)) then v60=3 + 0 ;break;end if (v74==2) then wait(1);print(v7("\17\199\152\11\68\98\240\240\42\67\46\233\160\17\84\54\172\131\10\73\50\252\181\26\7","\66\140\208\126\38"));v74=10 -7 ;end if (v74==(2 -1)) then print(v7("\106\193\123\4\235\184\69\170\103\20\229\253\73\229\65\5\169\203\77\229\67\1\236\252\24","\57\138\51\113\137\152"));game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(559.2583236694336 -(238 + 229)),231.24999237060547 -(49 + 166) , -(18.09095573425293 + 0));v74=2 -0 ;end end end if (v60==(9 -4)) then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(58.716796875 -18),4.999999284744263 -2 , -(27.480350494384766 + 13));wait(1839 -(432 + 1406) );print(v7("\211\250\121\70\1\53\25\116\212\212\93\86\19\122\23\32\160\226\69\92\19\101\0\48\161","\128\177\49\51\99\21\101\84"));game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(1976.1667022705078 -(152 + 1732)),6.249990463256836 + 10 , -1.8569060564041138);break;end if (v60==(1742 -(1246 + 495))) then local v76=0 + 0 ;while true do if (v76==(3 + 0)) then v60=1 + 1 ;break;end if (v76==(1 + 0)) then print(v7("\238\253\173\4\163\179\193\150\177\20\173\246\205\217\151\5\225\192\201\217\149\1\164\247\156","\189\182\229\113\193\147"));game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(0.773045003414154 + 0),8.999999284744263 -6 ,14.372901916503906 + 25 );v76=2;end if (v76==(165 -(123 + 40))) then wait(2 + 0 );print(v7("\74\114\129\197\123\25\181\144\77\92\165\213\105\86\187\196\57\106\189\223\105\73\172\212\56","\25\57\201\176"));v76=14 -11 ;end if ((0 + 0)==v76) then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(403.7966537475586 -311),16.24999237060547,1357.1969385147095 -(867 + 484) );wait(1 + 0 );v76=1 -0 ;end end end if (v60==(549 -(56 + 490))) then local v77=0 -0 ;while true do if (v77==(1 -0)) then print(v7("\238\24\81\108\199\83\33\81\233\54\117\124\213\28\47\5\157\0\109\118\213\3\56\21\156","\189\83\25\25\165\115\93\113"));game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(1110.716796875 -(425 + 645)),2.9999992847442627, -(247.48035049438477 -(140 + 67)));v77=3 -1 ;end if (v77==(9 -6)) then v60=11 -7 ;break;end if (v77==0) then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(0.773045003414154 -0),2.9999992847442627,62.372901916503906 -23 );wait(7 -5 );v77=1 + 0 ;end if (v77==(1 + 1)) then local v106=0;while true do if (v106==0) then wait(1 + 0 );print(v7("\218\210\105\58\7\145\196\85\221\252\77\42\21\222\202\1\169\202\85\32\21\193\221\17\168","\137\153\33\79\101\177\184\117"));v106=148 -(139 + 8) ;end if (v106==1) then v77=12 -9 ;break;end end end end end if (v60==0) then wait();wait(2);print(v7("\193\173\196\150\71\142\238\198\216\134\73\203\226\137\254\151\5\253\230\137\252\147\64\202\179","\146\230\140\227\37\174"));game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -40.716796875,8.999999284744263 -6 , -(176.48035049438477 -(22 + 114)));wait(1 -0 );print(v7("\248\3\32\167\40\127\37\139\28\13\190\47\47\54\217\60\72\129\62\48\41\219\45\12\243","\171\72\104\210\74\95\89"));v60=1964 -(93 + 1870) ;end if (v60==(2 + 2)) then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(383.4814758300781 -(207 + 84)),16.249990463256836, -(945.0801162719727 -(863 + 72)));wait(1);print(v7("\184\154\214\240\195\203\173\190\209\196\135\180\238\234\211\159\241\205\241\206\155\161\251\225\128","\235\209\158\133\161"));game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(0.773045003414154 + 0),2.9999992847442627 + 0 ,910.3729019165039 -(327 + 544) );wait(2 -0 );print(v7("\57\208\45\198\82\128\144\87\62\254\9\214\64\207\158\3\74\200\17\220\64\208\137\19\75","\106\155\101\179\48\160\236\119"));v60=12 -7 ;end end end break;end end break;end end end end});local v14=v13:CreateSection(v7("\148\120\254\112\161\90\179","\192\40\222\54"));local v17=v13:CreateToggle({[v7("\92\10\89\50","\18\107\52\87\225\181")]=v7("\14\235\57\5\77\96\216\36\4\1\97\170\96\72\57\24","\72\138\75\104\109"),[v7("\147\88\3\221\245\73\61\71\177\65\4\202","\208\45\113\175\144\39\73\17")]=false,[v7("\113\240\26\42","\55\156\123\77\74\116")]=v7("\125\176\18\249\69\186\68\170","\41\223\117\158"),[v7("\129\115\235\253\163\163\113\236","\194\18\135\145\193")]=function(v15)if v15 then local v39=0 + 0 ;while true do if (v39==(0 -0)) then _G.loop=true;while _G.loop==true  do local v49=0;while true do if (v49==(0 -0)) then wait();print(v7("\203\113\215\157\143\137\228\26\203\141\129\204\232\85\237\156\204","\152\58\159\232\237\169"));v49=3 -2 ;end if (v49==(1 + 2)) then wait(1 + 1 );print(v7("\13\36\11\253\24\74\34\79\23\237\22\15\46\0\49\252\91","\94\111\67\136\122\106"));break;end if (v49==(2 -1)) then local v61=0 -0 ;while true do if (v61==(1923 -(1563 + 359))) then v49=7 -5 ;break;end if (v61==(0 + 0)) then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(1749.7730450034142 -(1289 + 460)),1.9999992847442627 + 1 ,39.372901916503906);wait(2);v61=1;end end end if (v49==(1 + 1)) then print(v7("\245\109\51\37\179\224\218\6\47\53\189\165\214\73\9\36\240","\166\38\123\80\209\192"));game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(887.6693420410156 -(63 + 680)),16.39999008178711,10.410478591918945 + 7 );v49=4 -1 ;end end end break;end end else local v40=0 -0 ;local v41;while true do if (v40==0) then v41=0;while true do if (v41==0) then _G.loop=false;while _G.loop==true  do local v63=0 + 0 ;local v64;while true do if (v63==(0 -0)) then v64=0 + 0 ;while true do if (v64==(1 + 1)) then wait(2);game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -144.66934204101562,244.3999900817871 -(76 + 152) ,35.410478591918945 -18 );v64=524 -(219 + 302) ;end if (v64==0) then wait();game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(0.773045003414154 + 0),2.9999992847442627,39.372901916503906);v64=1;end if (v64==(1 + 0)) then local v109=0;while true do if (v109==(1334 -(17 + 1316))) then v64=1 + 1 ;break;end if (v109==0) then wait(1757 -(254 + 1502) );print(v7("\198\36\14\107\163\181\19\102\74\164\249\10\54\113\179\225\79\21\106\174\229\31\35\122\224","\149\111\70\30\193"));v109=1;end end end if (v64==3) then wait(1000 -(245 + 754) );break;end end break;end end end break;end end break;end end end end});local v13=v12:CreateTab(v7("\6\3\49\222\207\225\149\106","\82\102\93\187\191\142\231\30"),4315694910 --167667548 );local v14=v13:CreateSection(v7("\208\211\243\128\149\235\196\235\197\181\235\223\241\145\150","\132\182\159\229\229"));local v18=v13:CreateButton({[v7("\168\18\249\116","\230\115\148\17")]=v7("\129\228\58","\210\180\119\126\202\64\90"),[v7("\88\139\205\89\191\68\160\179","\27\234\161\53\221\37\195\216")]=function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(33.783905029296875,1109.8523647785187 -(170 + 937) ,100.54866409301758 -61 );end});local v18=v13:CreateButton({[v7("\205\121\22\83","\131\24\123\54\189")]=v7("\77\114","\29\34\234\236\18\125\100\32"),[v7("\61\13\227\73\35\31\15\228","\126\108\143\37\65")]=function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(66.36813163757324 -43 ,5.852364778518677 -3 , -(49.02229309082031 -16));end});local v18=v13:CreateButton({[v7("\121\2\57\135","\55\99\84\226\111")]=v7("\42\178","\107\226\221\158\217"),[v7("\163\249\179\20\130\249\188\19","\224\152\223\120")]=function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -31.63499641418457,4.852364778518677 -2 , -(149.2054100036621 -114));end});local v18=v13:CreateButton({[v7("\211\254\209\49","\157\159\188\84\133\205\124\192")]=v7("\8\211\126\54\226\87\40\231\78","\73\131\43\70\133\37"),[v7("\238\180\209\23\118\227\248\138","\173\213\189\123\20\130\155\225")]=function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -84.53499603271484,15.99999713897705, -(1417.6129388809204 -(635 + 774)));end});local v18=v13:CreateButton({[v7("\28\8\86\217","\82\105\59\188\119\20")]=v7("\92\16\214\2","\29\98\179\99\220"),[v7("\82\88\220\165\115\88\211\162","\17\57\176\201")]=function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(130.92364501953125 -69 ,9.999999284744263 -7 , -(21018.748046875 -11041));end});local v18=v13:CreateButton({[v7("\16\51\114\221","\94\82\31\184\56\140\191")]=v7("\246\147","\162\195\22\177"),[v7("\196\166\94\69\246\1\228\172","\135\199\50\41\148\96")]=function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(88 + 18),16.14999008178711,26);end});local v13=v12:CreateTab(v7("\39\196\89\124\19\242\240\16\203\94","\101\165\58\23\116\128\159"),4483362458 -0 );local v14=v13:CreateSection(v7("\55\161\16\125\107","\122\206\116\24\24\83\64"));local v18=v13:CreateButton({[v7("\105\189\173\251","\39\220\192\158")]=v7("\252\8\81\69\198\65\123\66\214\4","\178\97\54\45"),[v7("\18\181\226\163\127\48\183\229","\81\212\142\207\29")]=function()lighting=game:GetService(v7("\125\64\160\195\248\226\29\174","\49\41\199\171\140\139\115\201"));if (lighting.TimeOfDay==v7("\99\25\229\9\99\19\239\9","\83\41\223\57")) then lighting.TimeOfDay=11;else lighting.TimeOfDay=24;end end});local v18=v13:CreateButton({[v7("\200\65\143\0","\134\32\226\101")]=v7("\34\2\20\210\220\65\56\5\25\195","\117\106\125\166\185\97"),[v7("\167\113\85\192\136\164\113\143","\228\16\57\172\234\197\18")]=function()local v27=0 + 0 ;local v28;while true do if ((0 + 0)==v27) then v28=407 -(278 + 129) ;while true do if (v28==(1853 -(1718 + 135))) then lighting=game:GetService(v7("\239\84\215\142\148\202\83\215","\163\61\176\230\224"));if (lighting.TimeOfDay==v7("\212\85\83\118\248\134\47\254","\225\101\105\70\200\188\31\206")) then lighting.TimeOfDay=24;else lighting.TimeOfDay=11;end break;end end break;end end end});
+local Tab = Window:CreateTab("Automatic", 4483362458)
+local Section = Tab:CreateSection("SP Farm")
+local Toggle = Tab:CreateToggle({
+    Name = "Farm (Roll) + SP",
+    CurrentValue = false,
+    Flag = "Toggle", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        if (Value) then
+            _G.loop = true
+            while _G.loop == true do wait()
+                print("SKHub | Teleport!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.773045003414154, 2.9999992847442627, 39.372901916503906)--Roll
+                wait(2)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.38431930541992, 2.9999992847442627, 39.20112991333008)--SPM
+                print("SKHub | Teleport!")
+                wait(1)
+                print("SKHub | Teleport!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.55153274536133, 2.9999992847442627, 3.3127779960632324)--SPM-Multi
+                wait(1)
+                print("SKHub | Teleport!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.773045003414154, 2.9999992847442627, 39.372901916503906)--Roll
+                wait(2)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.38431930541992, 2.9999992847442627, 39.20112991333008)--SPM
+                print("SKHub | Teleport!")
+                wait(1)
+                print("SKHub | Teleport!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.184444427490234, 2.9999992847442627, 27.963645935058594)--Luck
+                wait(2)
+            end
+        else
+            _G.loop = false
+            while _G.loop == true do wait()
+                print("SKHub | Teleport Stopped!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.773045003414154, 2.9999992847442627, 39.372901916503906)--Roll
+                wait(2)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.38431930541992, 2.9999992847442627, 39.20112991333008)--SPM
+                print("SKHub | Teleport Stopped!")
+                wait(1)
+                print("SKHub | Teleport Stopped!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.55153274536133, 2.9999992847442627, 3.3127779960632324)--SPM-Multi
+                wait(1)
+                -----
+                print("SKHub | Teleport Stopped!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.773045003414154, 2.9999992847442627, 39.372901916503906)--Roll
+                wait(2)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.38431930541992, 2.9999992847442627, 39.20112991333008)--SPM
+                print("SKHub | Teleport Stopped!")
+                wait(1)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.184444427490234, 2.9999992847442627, 27.963645935058594)--Luck
+                wait(1)
+            end
+        end
+    end,
+ })
+
+ local Section = Tab:CreateSection("PP Farm")
+ local Toggle = Tab:CreateToggle({
+    Name = "Farm (Roll) + PP",
+    CurrentValue = false,
+    Flag = "Toggle5", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        if (Value) then
+            _G.loop = true
+            while _G.loop == true do wait()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.773045003414154, 2.9999992847442627, 39.372901916503906)--Roll
+                print("SKHub | Teleport!")
+                wait(2)
+                print("SKHub | Teleport!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.029876708984375, 2.9999992847442627, -39.80170822143555)--PP Points
+                wait(1)
+                print("SKHub | Teleport!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(19.410200119018555, 2.9999992847442627, -40.45424270629883)-- PP Multi
+                wait(1)
+                print("SKHub | Teleport!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.773045003414154, 2.9999992847442627, 39.372901916503906)
+                wait(2)
+                print("SKHub | Teleport!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.029876708984375, 2.9999992847442627, -39.80170822143555)--PP Points
+                wait(1)
+                print("SKHub | Teleport!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(26.838144302368164, 2.9999992847442627, -40.46644973754883)--PP Luck   
+                wait(1)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.773045003414154, 2.9999992847442627, 39.372901916503906)
+                wait(2)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.029876708984375, 2.9999992847442627, -39.80170822143555)--PP Points
+                wait(1)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(11.115152359008789, 2.9999992847442627, -40.311256408691406)-- PP- PPM
+            end
+        else
+            _G.loop = false
+            while _G.loop == true do wait()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.773045003414154, 2.9999992847442627, 39.372901916503906)--Roll
+                print("SKHub | Teleport Stopped!")
+                wait(2)
+                print("SKHub | Teleport Stopped!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.029876708984375, 2.9999992847442627, -39.80170822143555)--PP Points
+                wait(1)
+                print("SKHub | Teleport Stopped!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(19.410200119018555, 2.9999992847442627, -40.45424270629883)-- PP Multi
+                wait(1)
+                print("SKHub | Teleport Stopped!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.773045003414154, 2.9999992847442627, 39.372901916503906)
+                wait(2)
+                print("SKHub | Teleport Stopped!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.029876708984375, 2.9999992847442627, -39.80170822143555)--PP Points
+                wait(1)
+                print("SKHub | Teleport Stopped!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(26.838144302368164, 2.9999992847442627, -40.46644973754883)--PP Luck   
+                wait(1)
+            end
+        end
+    end,
+ })
+ local Section = Tab:CreateSection("AP Farm")
+ local Toggle = Tab:CreateToggle({
+    Name = "Farm (Roll) + Upgrades",
+    CurrentValue = false,
+    Flag = "Toggle9", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        if (Value) then
+            _G.loop = true
+            while _G.loop == true do wait()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.773045003414154, 2.9999992847442627, 39.372901916503906)--Roll
+                print("SKHub | Teleport!")
+                wait(2)
+                print("SKHub | Teleport!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-40.716796875, 2.9999992847442627, -40.480350494384766)--APM Points
+                wait(1)
+                print("SKHub | Teleport!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-92.7966537475586, 16.24999237060547, 6.196938514709473)-- Multi
+                wait(1)
+                print("SKHub | Teleport!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.773045003414154, 2.9999992847442627, 39.372901916503906)
+                wait(2)
+                print("SKHub | Teleport!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-40.716796875, 2.9999992847442627, -40.480350494384766)--APM Points
+                wait(1)
+                print("SKHub | Teleport!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-92.2583236694336, 16.24999237060547, -18.09095573425293)--AP Luck
+                wait(1)
+                print("SKHub | Teleport!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.773045003414154, 2.9999992847442627, 39.372901916503906)
+                wait(2)
+                print("SKHub | Teleport!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-40.716796875, 2.9999992847442627, -40.480350494384766)--APM Points
+                wait(1)
+                print("SKHub | Teleport!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-92.48147583007812, 16.249990463256836, -10.080116271972656)--AP Luck
+                wait(1)
+                print("SKHub | Teleport!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.773045003414154, 2.9999992847442627, 39.372901916503906)
+                wait(2)
+                print("SKHub | Teleport!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-40.716796875, 2.9999992847442627, -40.480350494384766)--APM Points
+                wait(1)
+                print("SKHub | Teleport!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-92.16670227050781, 16.249990463256836, -1.8569060564041138)--AP Luck
+                wait(2)         
+            end
+        else
+            _G.loop = false
+            while _G.loop == true do wait()
+                wait(2)
+                print("SKHub | Teleport Stopped!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-40.716796875, 2.9999992847442627, -40.480350494384766)--APM Points
+                wait(1)
+                print("SKHub | Teleport Stopped!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-92.7966537475586, 16.24999237060547, 6.196938514709473)-- Multi
+                wait(1)
+                print("SKHub | Teleport Stopped!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.773045003414154, 2.9999992847442627, 39.372901916503906)
+                wait(2)
+                print("SKHub | Teleport Stopped!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-40.716796875, 2.9999992847442627, -40.480350494384766)--APM Points
+                wait(1)
+                print("SKHub | Teleport Stopped!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-92.2583236694336, 16.24999237060547, -18.09095573425293)--AP Luck
+                wait(1)
+                print("SKHub | Teleport Stopped!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.773045003414154, 2.9999992847442627, 39.372901916503906)
+                wait(2)
+                print("SKHub | Teleport Stopped!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-40.716796875, 2.9999992847442627, -40.480350494384766)--APM Points
+                wait(1)
+                print("SKHub | Teleport Stopped!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-92.48147583007812, 16.249990463256836, -10.080116271972656)--AP Luck
+                wait(1)
+                print("SKHub | Teleport Stopped!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.773045003414154, 2.9999992847442627, 39.372901916503906)
+                wait(2)
+                print("SKHub | Teleport Stopped!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-40.716796875, 2.9999992847442627, -40.480350494384766)--APM Points
+                wait(1)
+                print("SKHub | Teleport Stopped!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-92.16670227050781, 16.249990463256836, -1.8569060564041138)--AP Luck               
+            end
+        end
+    end,
+ })
+
+ -------
+
+ local Section = Tab:CreateSection("TP Farm")
+ local Toggle = Tab:CreateToggle({
+    Name = "Farm (Roll) + TP",
+    CurrentValue = false,
+    Flag = "Toggle14", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        if (Value) then
+            _G.loop = true
+            while _G.loop == true do wait()
+                print("SKHub | Teleport!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.773045003414154, 2.9999992847442627, 39.372901916503906)
+                wait(2)
+                print("SKHub | Teleport!")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-144.66934204101562, 16.39999008178711, 17.410478591918945)
+                wait(2)
+                print("SKHub | Teleport!")
+            end
+        else
+            _G.loop = false
+            while _G.loop == true do wait()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.773045003414154, 2.9999992847442627, 39.372901916503906)
+                wait(1)
+                print("SKHub | Teleport Stopped!")
+                wait(2)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-144.66934204101562, 16.39999008178711, 17.410478591918945)
+                wait(1)
+            end
+        end
+    end,
+ })
+
+ local Tab = Window:CreateTab("Teleport", 4483362458)
+ local Section = Tab:CreateSection("Teleport Points")
+ local Button = Tab:CreateButton({
+    Name = "SPM",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(33.783905029296875, 2.8523647785186768, 39.54866409301758)
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "PP",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(23.368131637573242, 2.8523647785186768, -33.02229309082031)
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "AP",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-31.63499641418457, 2.8523647785186768, -35.20541000366211)
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "APUpgrade",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-84.53499603271484, 15.99999713897705, -8.61293888092041)
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "Area",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(61.92364501953125, 2.9999992847442627, -9977.748046875)
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "TP",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-106, 16.14999008178711, 26)
+    end,
+ })
+ 
+
+ local Tab = Window:CreateTab("Background", 4483362458)
+ local Section = Tab:CreateSection("Modes")
+ local Button = Tab:CreateButton({
+    Name = "Night Mode",
+    Callback = function()
+    lighting = game:GetService("Lighting")
+        if lighting.TimeOfDay == "00:00:00" then
+            lighting.TimeOfDay = 11
+        else 
+            lighting.TimeOfDay = 24
+        end
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "White Mode",
+    Callback = function()
+    lighting = game:GetService("Lighting")
+        if lighting.TimeOfDay == "50:00:00" then
+            lighting.TimeOfDay = 24
+        else 
+            lighting.TimeOfDay = 11
+        end
+    end,
+ })
+
+ 
