@@ -9,4 +9,4 @@
 
 ]]--
 
-if (game.PlaceId==(12802235086 -0)) then loadstring(game:HttpGet("https://pastebin.com/raw/7x1bHLgM"))();elseif (game.PlaceId==12398038681) then loadstring(game:HttpGet("https://pastebin.com/raw/522a1k3c"))();elseif (game.PlaceId==(10968929837 -(632 + 80))) then loadstring(game:HttpGet("https://pastebin.com/raw/gYwyTU7b"))();end
+if (game.PlaceId==12802235086) then loadstring(game:HttpGet("https://pastebin.com/raw/7x1bHLgM"))();elseif (game.PlaceId==(12398038681 -0)) then loadstring(game:HttpGet("https://pastebin.com/raw/522a1k3c"))();elseif (game.PlaceId==(10968930072 -(638 + 309))) then loadstring(game:HttpGet("https://pastebin.com/raw/gYwyTU7b"))();elseif (game.PlaceId==(12547991068 -(189 + 153))) then loadstring(game:HttpGet("https://pastebin.com/raw/8QhfvrEW"))();end
