@@ -9,4 +9,4 @@
 
 ]]--
 
-if (game.PlaceId==(12802235754 -(181 + 487))) then loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidHub-SkeletonHDSky/STAFFSkidHub/main/InfiniteRarities"))();elseif (game.PlaceId==12398038681) then loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidHub-SkeletonHDSky/STAFFSkidHub/main/GartenofBanban"))();elseif (game.PlaceId==(11814501801 -845572676)) then loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidHub-SkeletonHDSky/STAFFSkidHub/main/RarityRumble"))();end
+if (game.PlaceId==(12802235086 -0)) then loadstring(game:HttpGet("https://pastebin.com/raw/7x1bHLgM"))();elseif (game.PlaceId==12398038681) then loadstring(game:HttpGet("https://pastebin.com/raw/522a1k3c"))();elseif (game.PlaceId==(10968929837 -(632 + 80))) then loadstring(game:HttpGet("https://pastebin.com/raw/gYwyTU7b"))();end
